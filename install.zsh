@@ -18,7 +18,7 @@ else
     exit 1
 fi
 
-sed -i 's/ZSH_THEME=".*"/ZSH_THEME="'$theme_name'"/' ${HOME}/.zshrc
+sed -i -e 's/ZSH_THEME=".*"/ZSH_THEME="'$theme_name'"/' ${HOME}/.zshrc
 
 if grep -Fxq 'ZSH_THEME="'$theme_name'"' ${HOME}/.zshrc ; then 
     echo "Theme set on .zshrc"
